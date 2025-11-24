@@ -19,7 +19,7 @@ ProgressBarLabActivity9 demonstrates real-time progress tracking in React Native
 [![Download ProgressBarLabActivity9](https://img.shields.io/badge/Download-ProgressBarLabActivity9.zip-blue?style=for-the-badge&logo=download)](https://github.com/hjoseph777/ProgressBarLabActivity9/releases/download/v1/ProgressBarLabActivity9.zip)
 
 ## Live Demo
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://progressbarlabactivity9.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://progress-bar-lab-activity9-bf75qx3hu.vercel.app/)
 
 *Interactive character progress tracker - try typing to see real-time progress updates*
 
@@ -87,53 +87,6 @@ ProgressBarLabActivity9/
 - **Red (`#FF3B30`)**: Complete state color (iOS system red)
 - **Light Gray (`#E1E1E1`)**: Unfilled progress background
 
-## Getting Started
-
-### Prerequisites
-- Node.js (latest LTS)
-- Expo CLI or Expo Go app
-- npm or yarn package manager
-
-### Installation
-1. Clone or download the project
-2. Navigate to project directory
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-### Running the App
-```bash
-# Start the development server
-npm start
-
-# Or run on specific platform
-npm run android    # Android device/emulator
-npm run ios        # iOS device/simulator  
-npm run web        # Web browser
-```
-
-### Deploying to Vercel
-```bash
-# Build for web deployment
-npm run build-web
-
-# Deploy to Vercel (make sure you have Vercel CLI installed)
-vercel --prod
-```
-
-The project includes `vercel.json` configuration for seamless deployment to Vercel.
-
-## How It Works
-
-### Character Progress Logic
-```javascript
-// Calculate progress as fraction (0-1) based on character count
-const progress = Math.min(inputText.length / 100, 1);
-
-// Determine color based on completion status
-const progressColor = isComplete ? '#FF3B30' : '#007AFF';
-```
 
 ### Progress Components
 - **Pie Progress**: Always blue for visual consistency
