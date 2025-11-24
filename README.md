@@ -87,6 +87,67 @@ ProgressBarLabActivity9/
 - **Red (`#FF3B30`)**: Complete state color (iOS system red)
 - **Light Gray (`#E1E1E1`)**: Unfilled progress background
 
+## Getting Started
 
+### Prerequisites
+- Node.js (latest LTS)
+- Expo CLI or Expo Go app
+- npm or yarn package manager
+
+### Installation
+1. Clone or download the project
+2. Navigate to project directory
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the App
+```bash
+# Start the development server
+npm start
+
+# Or run on specific platform
+npm run android    # Android device/emulator
+npm run ios        # iOS device/simulator  
+npm run web        # Web browser
+```
+
+### Deploying to Vercel
+```bash
+# Build for web deployment
+npm run build-web
+
+# Deploy to Vercel (make sure you have Vercel CLI installed)
+vercel --prod
+```
+
+The project includes `vercel.json` configuration for seamless deployment to Vercel.
+
+## How It Works
+
+### Character Progress Logic
+```javascript
+// Calculate progress as fraction (0-1) based on character count
+const progress = Math.min(inputText.length / 100, 1);
+
+// Determine color based on completion status
+const progressColor = isComplete ? '#FF3B30' : '#007AFF';
+```
+
+### Progress Components
+- **Pie Progress**: Always blue for visual consistency
+- **Bar Progress**: Changes color (blue → red) when reaching 100%
+- **Character Counter**: Shows "X / 100 characters" with completion indicator
+
+## Testing Checklist
+
+- Type 30 characters → progress shows ~30%
+- Type 100 characters → bar turns red, shows "✓ Complete!"  
+- Delete characters → progress decreases, color returns to blue
+- TextInput enforces 100 character maximum
+- Both Pie and Bar update simultaneously
+
+---
 
 *This project demonstrates real-time progress tracking with visual feedback using React Native and the react-native-progress library.*
